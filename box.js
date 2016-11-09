@@ -1,6 +1,6 @@
-function Box(x, y, z, r, img) {
+function Box(x, y, z, sx, sy, sz, img) {
   this.pos = createVector(x, y, z);
-  this.r = r;
+  this.r = createVector(sx,sy,sz);
   this.texture = img;
   this.show = function() {
     push();
