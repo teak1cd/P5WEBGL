@@ -2,12 +2,15 @@
 var objects = [];
 var a = 0;
 var imag = [];
-var rotation = createVector(0,0,0);
-var mousePX = mouseX;
-var mousePY = mouseY;
+var rotation;
+var mousePX;
+var mousePY;
 function setup() {
   createCanvas(720, 720, WEBGL);
-    objects.push(new Box(0,0,0,188,0));
+  mousePY = mouseY;
+  mousePX = mouseX;
+  rotation = createVector(0,0,0);
+  objects.push(new Box(0,0,0,188,0));
   imag.push(loadImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQQnp1wGl3rL4v2Moil_j16ieA-As7R2Zza5AEsEXb7qmPBHIghQ"));
 }
 
