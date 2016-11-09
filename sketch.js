@@ -12,7 +12,7 @@ function setup() {
   mousePX = mouseX;
   rotation = {"x":0,"y":0,"z":0}
   objects.push(new Box(0,0,0,188,0));
-  imag.push(loadImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQQnp1wGl3rL4v2Moil_j16ieA-As7R2Zza5AEsEXb7qmPBHIghQ"));
+  imag.push(loadImage("tex.png"));
 }
 function draw() {
   if(mouseIsPressed){
