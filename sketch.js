@@ -15,7 +15,7 @@ function setup() {
   imag.push(loadImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQQnp1wGl3rL4v2Moil_j16ieA-As7R2Zza5AEsEXb7qmPBHIghQ"));
 }
 function draw() {
-  if(mosueIsPressed){
+  if(mouseIsPressed){
     rotation.x+=mouseX-mousePX;
     rotation.z+=mouseY-mousePY;
     mousePX = mouseX;
