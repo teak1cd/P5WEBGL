@@ -1,6 +1,6 @@
 function level(){
   this.getData = function(path){
-    var data = loadJSON(path);
+    var data = JSON.parse(path);
     var output = [[],[]];
     for(var i = 0;i<data.objects.length;i++){
       if(typeof window[data.objects[i].type] !== "undefined"){
