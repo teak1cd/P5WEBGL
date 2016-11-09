@@ -2,14 +2,17 @@ function getLevels(n){
   switch(n){
     case 0:
       return {
-    "textures": ["tex.png","drywall (3).png"],
+    "textures": ["tex.png","drywall.png"],
     "objects": [{
         "type": "Box",
         "inputs": [0, 0, 0, 100, 100, 100, 0]
     }, {
         "type": "Box",
-        "inputs": [200,200, 200, 100, 100, 100, 1]
-    }]};
+        "inputs": [0, 800, 0, 100, 100, 100, 1]
+    }, {
+        "type": "Box",
+        "inputs": [0, 900, 0, 50, 50, 50, 0]
+    }]}};
     break;
   }
 }
