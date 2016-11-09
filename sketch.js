@@ -17,18 +17,18 @@ function draw() {
   if(mouseIsPressed){
     mouseX = mouseX/50;
     mouseY = mouseY/50;
-    rotation.x+=mouseX-mousePX;
-    rotation.z+=mouseY-mousePY;
+    rotation.z+=mouseX-mousePX;
+    rotation.x-=mouseY-mousePY;
     mousePX = mouseX;
     mousePY = mouseY;
   }
-  background(51);
+  background(0);
   rotateX(rotation.x);
   rotateY(rotation.y);
   rotateZ(rotation.z);
+  light();
   for(var i = 0;i<objects.length;i++){
       texture(imag[objects[i].texture])
       objects[i].show();
   }
-  a+=0.01;
 }
