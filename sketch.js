@@ -10,7 +10,7 @@ function setup() {
   mousePY = mouseY;
   mousePX = mouseX;
   rotation = {"x":0,"y":0,"z":0}
-  objects.push(new Box(0,0,0,200,0));
+  objects.push(new Box(0,0,0,200,50,50,0));
   imag.push(loadImage("tex.png"));
 }
 function draw() {
@@ -26,7 +26,6 @@ function draw() {
   rotateX(rotation.x);
   rotateY(rotation.y);
   rotateZ(rotation.z);
-  light();
   for(var i = 0;i<objects.length;i++){
       texture(imag[objects[i].texture])
       objects[i].show();
