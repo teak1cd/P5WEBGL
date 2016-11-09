@@ -1,4 +1,3 @@
-
 var objects = [];
 var a = 0;
 var imag = [];
