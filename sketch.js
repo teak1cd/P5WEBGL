@@ -1,3 +1,4 @@
+var level;
 var objects = [];
 var a = 0;
 var imag = [];
@@ -5,12 +6,15 @@ var rotation;
 var mousePX;
 var mousePY;
 var mp;
+var sceneData;
 function setup() {
   createCanvas(720, 720, WEBGL);
   mousePY = mouseY;
   mousePX = mouseX;
+  level = new level();
   rotation = {"x":0,"y":0,"z":0}
-  objects.push(new Box(0,0,0,200,50,50,0));
+  sceneData = level.getData("level0.json");
+  objects = sceneData[0];
   imag.push(loadImage("tex.png"));
 }
 function draw() {
@@ -33,3 +37,19 @@ function draw() {
       objects[i].show();
   }
 }
+
+
+/*
+
+{
+ "objects":[
+  {
+   "type":"box",
+   "size":{},
+   "pos":{}
+  }
+ ]
+}
+
+
+*/
