@@ -6,7 +6,7 @@ function Box(x, y, z, sx, sy, sz, img) {
     push();
     translate(this.pos.x, this.pos.y, this.pos.z);
     //fill(255);
-    box(this.r);
+    box(this.r.x,this.r.y,this.r.z);
     pop();
     return 0;
   }
