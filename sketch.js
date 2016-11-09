@@ -4,7 +4,7 @@ var a = 0;
 
 function setup() {
   createCanvas(720, 720, WEBGL);
-    objects.push(new Box(0,0,0,200,loadImage("dirt.png")));
+    objects.push(new Box(0,0,0,200,loadImage("assets/dirt.png")));
   // An array of Box objects
   // Star with one
 }
