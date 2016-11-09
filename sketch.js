@@ -13,7 +13,7 @@ function setup() {
   mousePX = mouseX;
   level = new level();
   rotation = {"x":0,"y":0,"z":0}
-  sceneData = level.getData(getLevel(0));
+  sceneData = level.getData(getLevels(0));
   objects = sceneData[0];
   img = sceneData[1];
   for(var i = 0;i<img.length;i++){
