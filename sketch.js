@@ -11,7 +11,7 @@ function setup() {
   mousePY = mouseY;
   mousePX = mouseX;
   rotation = {"x":0,"y":0,"z":0}
-  objects.push(new Box(0,0,0,188,0));
+  objects.push(new Box(0,0,0,200,0));
   imag.push(loadImage("tex.png"));
 }
 function draw() {
