@@ -16,6 +16,8 @@ function setup() {
 }
 function draw() {
   if(mouseIsPressed){
+    mouseX = mouseX/50;
+    mouseY = mouseY/50;
     rotation.x+=mouseX-mousePX;
     rotation.z+=mouseY-mousePY;
     mousePX = mouseX;
