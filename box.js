@@ -5,7 +5,7 @@ function Box(x, y, z, r, img) {
   this.show = function() {
     push();
     translate(this.pos.x, this.pos.y, this.pos.z);
-    texture(loadImage(this.img));
+    texture(this.img);
     //fill(255);
     box(this.r);
     pop();
