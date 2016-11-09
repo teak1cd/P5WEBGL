@@ -15,7 +15,10 @@ function setup() {
   rotation = {"x":0,"y":0,"z":0}
   sceneData = level.getData("level0.json");
   objects = sceneData[0];
-  imag.push(loadImage("tex.png"));
+  img = sceneData[1];
+  for(var i = 0;i<img.length;i++){
+    imag.push(loadImage(img[i]));
+  }
 }
 function draw() {
   if(mouseIsPressed){
