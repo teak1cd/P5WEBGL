@@ -2,6 +2,9 @@
 var objects = [];
 var a = 0;
 var imag = [];
+var rotation = createVector(0,0,0);
+var mousePX = mouseX;
+var mousePY = mouseY;
 function setup() {
   createCanvas(720, 720, WEBGL);
     objects.push(new Box(0,0,0,188,0));
@@ -9,14 +12,17 @@ function setup() {
 }
 
 function mousePressed() {
-
+  rotation.x+=mouseX-mousePX;
+  rotaiont.z+=mouseY-mousePY;
+  mousePX = mouseX;
+  mousePY = mouseY;
 }
 
 function draw() {
   background(51);
-  rotateX(a);
-  rotateY(a * 0.4);
-  rotateZ(a * 0.1);
+  rotateX(rotation.x);
+  rotateY(rotation.y);
+  rotateZ(rotation.z);
   for(var i = 0;i<objects.length;i++){
       texture(imag[objects[i].texture])
       objects[i].show();
