@@ -12,7 +12,7 @@ function getLevels(n){
     }, {
         "type": "Box",
         "inputs": [0, 900, 0, 50, 50, 50, 0]
-    }]}};
+    }]};
     break;
   }
 }
