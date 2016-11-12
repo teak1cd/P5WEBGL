@@ -4,6 +4,8 @@ function level(){
     for(var i = 0;i<data.objects.length;i++){
       if(typeof window[data.objects[i].type] !== "undefined"){
         output[0].push( new window[data.objects[i].type](data.objects[i].inputs));
+      }else{
+        console.log("error: "+data.objects[i].type);
       }
     }
     output[1] = data.textures;
