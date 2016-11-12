@@ -8,7 +8,7 @@ function getLevels(n){
         "inputs": [0, 0, 0, 100, 100, 100, 2]
     }, {
         "type": "Sphere",
-        "inputs": [0, 800, 0, 100, 100, 100, 1]
+        "inputs": [0, 800, 0, 300, 2]
     }, {
         "type": "Box",
         "inputs": [0, 500, 0, 50, 50, 50, 1]
