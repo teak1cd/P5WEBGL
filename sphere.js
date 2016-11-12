@@ -12,7 +12,7 @@ function SphereU(x, y, z, rad, img) {
   }
 }
 
-function Box(inp) {
+function Sphere(inp) {
   this.pos = createVector(inp[0], inp[1], inp[2]);
   this.r = inp[3];
   this.texture = inp[4];
