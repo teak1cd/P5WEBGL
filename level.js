@@ -5,7 +5,7 @@ function level(){
       if(typeof window[data.objects[i].type] !== "undefined"){
         output[0].push( new window[data.objects[i].type](data.objects[i].inputs));
         if(typeof data.objects[i].promote!== "undefined"){
-           window[data.objects[i].promote]=output.length-1;
+           window[data.objects[i].promote]=i;
         }
       }else{
         console.log("error: "+data.objects[i].type);
