@@ -16,5 +16,5 @@ function level(){
   }
 }
 function getObjectFromPromote(ind){
-  return objects[0][ind];
+  return objects[ind];
 }
