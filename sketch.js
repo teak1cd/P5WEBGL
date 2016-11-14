@@ -8,7 +8,7 @@ var mousePY;
 var mp;
 var sceneData;
 function setup() {
-  createCanvas(720, 720, WEBGL);
+  createCanvas(innerWidth, innerHeight, WEBGL);
   mousePY = mouseY;
   mousePX = mouseX;
   level = new level();
@@ -35,9 +35,11 @@ function draw() {
   objects[hello_world].pos.x+=sin(frameCount/18)*4;
   objects[hello_world2].pos.x-=sin(frameCount/18)*4;
   background(0);
+ 
   rotateX(rotation.x);
   rotateY(rotation.y);
   rotateZ(rotation.z);
+  text("("+rotation.x+","+rotation.y+","+rotation.z+")",50,50);
   for(var i = 0;i<objects.length;i++){
       texture(imag[objects[i].texture])
       objects[i].show();
