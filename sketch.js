@@ -32,7 +32,7 @@ function draw() {
     //rotation.z+=0.01;
     //rotation.x+=0.001*PI
   }
-  objects[hello_world].pos.x+=sin(frameCount)*33;
+  objects[hello_world].pos.x+=sin(frameCount/18)*3;
   background(0);
   rotateX(rotation.x);
   rotateY(rotation.y);
