@@ -20,5 +20,23 @@ function getLevels(n){
         "inputs": [-200, 500, 0, 50, 50, 50, 1]
     }]};
     break;
+    case 1:
+      return {
+        "textures": ["drywall (3).png","tex.png"],
+        "objects":[
+          {
+            "type":"Box",
+            "inputs":[-400, -400, 0, 800, 800, 5, 0]
+          },
+          
+          {
+            "type":"Box",
+            "inputs":[-405, -405, 0, 810, 5, 810, 1]
+          }
+        ]
+      }
   }
+}
+function maxLevels(){
+return 1;
 }
