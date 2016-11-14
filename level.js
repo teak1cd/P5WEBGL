@@ -3,8 +3,8 @@ function level(){
     var output = [[],[]];
     for(var i = 0;i<data.objects.length;i++){
       if(typeof window[data.objects[i].type] !== "undefined"){
-        if(typeof objects[i].promote!== "undefined"){
-           window[objects[i].premote]=output.length;
+        if(typeof data[i].promote!== "undefined"){
+           window[data[i].promote]=output.length;
         }
         output[0].push( new window[data.objects[i].type](data.objects[i].inputs));
       }else{
