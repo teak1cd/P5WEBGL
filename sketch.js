@@ -39,7 +39,6 @@ function draw() {
   rotateX(rotation.x);
   rotateY(rotation.y);
   rotateZ(rotation.z);
-  text("("+rotation.x+","+rotation.y+","+rotation.z+")",50,50);
   for(var i = 0;i<objects.length;i++){
       texture(imag[objects[i].texture])
       objects[i].show();
