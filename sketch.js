@@ -29,8 +29,8 @@ function draw() {
     mousePX = mouseX;
     mousePY = mouseY;
   }else{
-    rotation.z+=0.01;
-    rotation.x+=0.001*PI
+    //rotation.z+=0.01;
+    //rotation.x+=0.001*PI
   }
   background(0);
   rotateX(rotation.x);
