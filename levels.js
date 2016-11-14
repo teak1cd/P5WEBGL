@@ -11,11 +11,11 @@ function getLevels(n){
         "inputs": [0, 800, 0, 300, 2]
     }, {
         "type": "Sphere",
-        "inputs": [0, 500, 0, 50, 50, 50, 1],
+        "inputs": [0, 500, 0, 50, 1],
         "promote":"hello_world"
     }, {
         "type": "Sphere",
-        "inputs": [0, 500, 0, 50, 50, 50, 1],
+        "inputs": [0, 500, 0, 50, 1],
         "promote":"hello_world2"
     }, {
         "type": "Box",
