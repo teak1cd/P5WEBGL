@@ -7,6 +7,7 @@ var mousePX;
 var mousePY;
 var mp;
 var sceneData;
+var engine = {};
 function setup() {
   createCanvas(innerWidth, innerHeight, WEBGL);
   mousePY = mouseY;
@@ -19,6 +20,7 @@ function setup() {
   for(var i = 0;i<img.length;i++){
     imag.push(loadImage(img[i]));
   }
+  engine.objects = objects;
 }
 function draw() {
   if(mouseIsPressed){
@@ -32,8 +34,8 @@ function draw() {
     //rotation.z+=0.01;
     //rotation.x+=0.001*PI
   }
-  objects[hello_world].pos.x+=sin(frameCount/18)*4;
-  objects[hello_world2].pos.x-=sin(frameCount/18)*4;
+  engine.objects[hello_world].pos.x+=sin(frameCount/18)*4;
+  engine.objects[hello_world2].pos.x-=sin(frameCount/18)*4;
   background(0);
  
   rotateX(rotation.x);
@@ -41,22 +43,6 @@ function draw() {
   rotateZ(rotation.z);
   for(var i = 0;i<objects.length;i++){
       texture(imag[objects[i].texture])
-      objects[i].show();
+      engine.objects[i].show();
   }
 }
-
-
-/*
-
-{
- "objects":[
-  {
-   "type":"box",
-   "size":{},
-   "pos":{}
-  }
- ]
-}
-
-
-*/
