@@ -18,6 +18,9 @@ function getLevels(n){
     }, {
         "type": "Box",
         "inputs": [-200, 500, 0, 50, 50, 50, 1]
+    }, {
+        "type": "Line",
+        "inputs": [0,0,0,500,500,500,color(0,255,255)]
     }]};
     break;
     case 1:
