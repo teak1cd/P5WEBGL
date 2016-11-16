@@ -25,3 +25,5 @@ function Sphere(inp) {
     return 0;
   }
 }
+Sphere.prototype.useTexture = true;
+SphereU.prototype.useTexture = true;
