@@ -34,8 +34,8 @@ function draw() {
     //rotation.z+=0.01;
     //rotation.x+=0.001*PI
   }
-  engine.objects[hello_world].pos.x+=sin(frameCount/18)*4;
-  engine.objects[hello_world2].pos.x-=sin(frameCount/18)*4;
+  //engine.objects[hello_world].pos.x+=sin(frameCount/18)*4;
+  //engine.objects[hello_world2].pos.x-=sin(frameCount/18)*4;
   background(0);
  
   rotateX(rotation.x);
