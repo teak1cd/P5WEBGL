@@ -20,5 +20,5 @@ function Line(inp) {
   }
 }
 
-Line.prototype.useTexture = true;
-LineU.prototype.useTexture = true;
+Line.prototype.useTexture = false;
+LineU.prototype.useTexture = false;
