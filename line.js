@@ -19,3 +19,6 @@ function Line(inp) {
     return 0;
   }
 }
+
+Line.prototype.useTexture = true;
+LineU.prototype.useTexture = true;
