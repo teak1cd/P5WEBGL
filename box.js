@@ -25,3 +25,5 @@ function Box(inp) {
     return 0;
   }
 }
+Box.prototype.useTexture = true;
+Box2.prototype.useTexture = true;
