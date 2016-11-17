@@ -42,7 +42,7 @@ function draw() {
   rotateY(rotation.y);
   rotateZ(rotation.z);
   for(var i = 0;i<objects.length;i++){
-      if(engine.objects[i].useTexture) texture(imag[objects[i].texture]);
+      if(typeof engine.objects[i].useTexture !== "undefined" && engine.objects[i].useTexture) texture(imag[objects[i].texture]);
       engine.objects[i].show();
   }
 }
