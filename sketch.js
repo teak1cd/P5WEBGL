@@ -23,12 +23,11 @@ function setup() {
   }else{
     sceneData = level.getData(externalData);
   }
-  objects = sceneData[0];
+  engine.objects = sceneData[0];
   img = sceneData[1];
   for(var i = 0;i<img.length;i++){
     imag.push(loadImage(img[i]));
   }
-  engine.objects = objects;
 }
 function draw() {
   if(mouseIsPressed){
@@ -49,7 +48,7 @@ function draw() {
   rotateX(rotation.x);
   rotateY(rotation.y);
   rotateZ(rotation.z);
-  for(var i = 0;i<objects.length;i++){
+  for(var i = 0;i<engine.objects.length;i++){
      try{
        if(typeof engine.objects[i].useTexture !== "undefined" && engine.objects[i].useTexture) texture(imag[engine.objects[i].texture]);
        engine.objects[i].show();
