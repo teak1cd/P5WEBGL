@@ -10,13 +10,15 @@ var sceneData;
 var engine = {};
 var useExternalLevel = false;
 var externalData = null;
+var run = 0;
 function setup() {
-  createCanvas(innerWidth, innerHeight, WEBGL);
+  if(run === 0)createCanvas(innerWidth, innerHeight, WEBGL);
+  run = 1;
   mousePY = mouseY;
   mousePX = mouseX;
   level = new level();
   rotation = {"x":2.4,"y":0,"z":0}
-  if(){
+  if(useExternalLevel){
      sceneData = level.getData(getLevels(0));
   }else{
     sceneData = level.getData(externalData);
