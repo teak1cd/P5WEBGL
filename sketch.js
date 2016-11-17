@@ -8,13 +8,19 @@ var mousePY;
 var mp;
 var sceneData;
 var engine = {};
+var useExternalLevel = false;
+var externalData = null;
 function setup() {
   createCanvas(innerWidth, innerHeight, WEBGL);
   mousePY = mouseY;
   mousePX = mouseX;
   level = new level();
   rotation = {"x":2.4,"y":0,"z":0}
-  sceneData = level.getData(getLevels(0));
+  if(){
+     sceneData = level.getData(getLevels(0));
+  }else{
+    sceneData = level.getData(externalData);
+  }
   objects = sceneData[0];
   img = sceneData[1];
   for(var i = 0;i<img.length;i++){
@@ -42,7 +48,11 @@ function draw() {
   rotateY(rotation.y);
   rotateZ(rotation.z);
   for(var i = 0;i<objects.length;i++){
-      if(typeof engine.objects[i].useTexture !== "undefined" && engine.objects[i].useTexture) texture(imag[objects[i].texture]);
-      engine.objects[i].show();
+     try{
+       if(typeof engine.objects[i].useTexture !== "undefined" && engine.objects[i].useTexture) texture(imag[objects[i].texture]);
+       engine.objects[i].show();
+     }catch(e){
+      console.log(e);
+     }
   }
 }
