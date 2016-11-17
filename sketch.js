@@ -51,7 +51,7 @@ function draw() {
   rotateZ(rotation.z);
   for(var i = 0;i<objects.length;i++){
      try{
-       if(typeof engine.objects[i].useTexture !== "undefined" && engine.objects[i].useTexture) texture(imag[objects[i].texture]);
+       if(typeof engine.objects[i].useTexture !== "undefined" && engine.objects[i].useTexture) texture(imag[engine.objects[i].texture]);
        engine.objects[i].show();
      }catch(e){
       console.log(e);
