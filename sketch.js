@@ -18,7 +18,7 @@ function setup() {
   mousePX = mouseX;
   level = new level();
   rotation = {"x":2.4,"y":0,"z":0}
-  if(useExternalLevel){
+  if(!useExternalLevel){
      sceneData = level.getData(getLevels(0));
   }else{
     sceneData = level.getData(externalData);
