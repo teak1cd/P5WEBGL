@@ -11,6 +11,8 @@ var engine = {};
 var useExternalLevel = false;
 var externalData = null;
 var run = 0;
+var rotation_history=[];
+var rhl = 1000;
 function setup() {
   if(run === 0)createCanvas(innerWidth, innerHeight, WEBGL);
   run = 1;
@@ -35,7 +37,8 @@ function draw() {
     mouseY = mouseY/50;
     rotation.z+=mouseX-mousePX;
     rotation.x-=mouseY-mousePY;
-    console.log(rotation);
+    rotation_history.push(Object.assign({},rotation));
+    if(rotation_history.length>rhl)rotation_history.shift();
     mousePX = mouseX;
     mousePY = mouseY;
   }else{
