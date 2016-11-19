@@ -35,6 +35,7 @@ function draw() {
     mouseY = mouseY/50;
     rotation.z+=mouseX-mousePX;
     rotation.x-=mouseY-mousePY;
+    console.log(rotation);
     mousePX = mouseX;
     mousePY = mouseY;
   }else{
